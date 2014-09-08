@@ -1,5 +1,6 @@
 <?php
-class Facebook {
+include_once "Likeable.php";
+class Facebook implements Likeable {
     private $status;
     private $user;
     private $like = 0;
@@ -18,5 +19,8 @@ class Facebook {
     }
     public function totalLike() {
         return $this->like;
+    }
+    public function platform() {
+        return "Facebook";
     }
 }

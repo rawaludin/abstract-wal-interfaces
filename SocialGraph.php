@@ -1,12 +1,16 @@
 <?php
 class SocialGraph {
-    public static function compareLike(Facebook $fb1, Facebook $fb2) {
-        if ($fb1->totalLike() > $fb2->totalLike()) {
-            echo "Status " .$fb1->user() . " Lebih populer dari " . $fb2->user() . "\n";
-        } elseif ($fb1->totalLike() < $fb2->totalLike()) {
-            echo "Status " .$fb2->user() . " Lebih populer dari " . $fb1->user() . "\n";
+    public static function compareLike(Likeable $social1, Likeable $social2) {
+        if ($social1->totalLike() > $social2->totalLike()) {
+            echo $social1->platform() . " ". $social1->user();
+            echo " Lebih populer dari " . $social2->platform() . " ";
+            echo $social2->user() . "\n";
+        } elseif ($social1->totalLike() < $social2->totalLike()) {
+            echo $social2->platform() . " ". $social2->user();
+            echo " Lebih populer dari " . $social1->platform() . " ";
+            echo $social1->user() . "\n";
         } else {
-            echo "Status kedua user sama-sama populer";
+            echo "Kedua user sama-sama populer.\n";
         }
     }
 }

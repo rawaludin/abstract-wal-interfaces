@@ -1,5 +1,6 @@
 <?php
-class Twitter {
+include_once "Likeable.php";
+class Twitter implements Likeable {
     private $tweet;
     private $user;
     private $favorite;
@@ -17,6 +18,15 @@ class Twitter {
         $this->favorite++;
     }
     public function totalFavorite() {
-        $this->favorite;
+        return $this->favorite;
+    }
+    public function like() {
+        $this->favorite();
+    }
+    public function totalLike() {
+        return $this->totalFavorite();
+    }
+    public function platform() {
+        return "Twitter";
     }
 }
