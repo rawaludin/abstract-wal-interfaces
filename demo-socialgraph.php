@@ -3,14 +3,14 @@ include "Facebook.php";
 include "Twitter.php";
 include "SocialGraph.php";
 
-$fbAgus = new Facebook("Agus", "Laravel itu gampang!");
-$fbAgus->like();
-$fbAgus->like();
+$fbTukul = new Facebook("Tukul Arwana", "Kembali ke laptop!");
+$fbTukul->like();
+$fbTukul->like();
 
-$twSusi = new Twitter("Susi", "Laravel itu super gampang!");
-$twSusi->favorite();
-$twSusi->favorite();
-$twSusi->favorite();
+$twJokowi = new Twitter("Joko Widodo", "Aku rapopo..");
+$twJokowi->favorite();
+$twJokowi->favorite();
+$twJokowi->favorite();
 
 $socialGraph = new SocialGraph();
-$socialGraph->compareLike($fbAgus, $twSusi);
+$socialGraph->compareLike($fbTukul, $twJokowi);

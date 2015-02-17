@@ -7,7 +7,7 @@ class Paypal extends PaymentMethod {
 
     public function __construct($email, $password) {
         // Ceritanya ini akses ke database
-        if ($email == "rahmat.awaludin@gmail.com" & $password == "12345") {
+        if ($email == "morgan@gmail.com" & $password == "12345") {
             $this->email = $email;
             echo "Berhasil login ke Paypal!\n";
         } else {

@@ -4,12 +4,12 @@ require_once "Pembeli.php";
 
 // Melakukan pembelian dengan paypal
 try {
-    $paypalSaya = new Paypal("rahmat.awaludin@gmail.com", "12345");
-    $paypalSaya->deposit(12000000);
-    $rahmat = new Pembeli("Rahmat Awaludin", $paypalSaya);
-    $rahmat->beli("Buku Menyelami Framework Laravel", 250000);
-    echo "Saldo terakhir Rp".$paypalSaya->cekSaldo()."\n";
-    echo $paypalSaya->cekNamaPembayaran();
+    $paymentMethod = new Paypal("morgan@gmail.com", "12345");
+    $paymentMethod->deposit(12000000);
+    $pembeli = new Pembeli("Morgan", $paymentMethod);
+    $pembeli->beli("Poster Smash Full Color", 100000);
+    echo "Saldo terakhir Rp".number_format($paymentMethod->cekSaldo())."\n";
+    echo $paymentMethod->cekNamaPembayaran();
 } catch (Exception $e) {
     echo $e->getMessage()."\n";
 }

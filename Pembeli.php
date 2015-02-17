@@ -14,7 +14,7 @@ class Pembeli {
         } else {
             $this->payment->kredit($harga);
             echo "Terima kasih $this->nama :)\n";
-            echo "Berhasil melakukan pembelian $nama seharga Rp$harga.\n";
+            echo "Berhasil melakukan pembelian $nama seharga Rp".number_format($harga).".\n";
         }
     }
 }
