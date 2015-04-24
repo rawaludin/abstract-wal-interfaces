@@ -6,8 +6,8 @@ require_once "Pembeli.php";
 try {
     $paymentMethod = new DebitBNI("12345");
     $paymentMethod->deposit(20000000);
-    $rahmat = new Pembeli("Rahmat Awaludin", $paymentMethod);
-    $rahmat->beli("Buku Menyelami Framework Laravel", 250000);
+    $rahmat = new Pembeli("Morgan", $paymentMethod);
+    $rahmat->beli("Sepatu Dance", 250000);
     echo "Saldo terakhir Rp".number_format($paymentMethod->cekSaldo())."\n";
     echo $paymentMethod->cekNamaPembayaran();
 } catch (Exception $e) {
